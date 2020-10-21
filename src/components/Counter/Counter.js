@@ -5,8 +5,8 @@ export default function Counter() {
     return (
         <>
             <div className="div-button">
-              <button>+</button>
-              <button>-</button>
+              <button className="Button">+</button>
+              <button className="Button">-</button>
             </div>
         </>
     );
