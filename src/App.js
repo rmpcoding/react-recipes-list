@@ -1,15 +1,9 @@
 import React from 'react';
+import Counter from './Counter';
 
 function App() {
     return (
-        <>
-            <div>
-                <p>hello world</p>
-            </div>
-            <div>
-                <p>2 kewl for skewl</p>
-            </div>
-        </>
+        <Counter/>
     );
 }
 
