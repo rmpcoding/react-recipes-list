@@ -1,9 +1,9 @@
 import React from 'react';
-import Counter from './components/Counter/Counter';
+import Counter from './components/Counter-Class/Counter';
 
 function App() {
     return (
-        <Counter/>
+        <Counter initialCount={0}/>
     );
 }
 
