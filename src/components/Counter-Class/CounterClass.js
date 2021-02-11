@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './CounterClass.css'
 
 export default class Counter extends Component {
     constructor(props) {
@@ -11,20 +12,21 @@ export default class Counter extends Component {
 
     render() {
         return (
-            <div className="counter">
+            <div className="counterClass">
                 <button
-                    className="counter__button"
-                    onClick={() => this.changeCount(-1)}
-                >
-                    -
-                </button>
-                <span className="counter__number">{this.state.count}</span>
-                <button
-                    className="counter__button"
+                    className="counterClass__button"
                     onClick={() => this.changeCount(1)}
                 >
                     +
                 </button>
+                <span className="counterClass__number">{this.state.count}</span>
+                <button
+                    className="counterClass__button"
+                    onClick={() => this.changeCount(-1)}
+                >
+                    -
+                </button>
+                <div>Counter Class Above</div>
             </div>
         );
     }

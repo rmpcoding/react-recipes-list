@@ -1,13 +1,28 @@
-import React from 'react';
-import Counter from './components/Counter-Class/Counter';
+import React, { useState } from 'react';
+import CounterClass from './components/Counter-Class/CounterClass';
+import CounterFunction from './components/Counter-Function/CounterFunction';
 import Form from './components/Form/Form';
 
 function App() {
+    const ThemeContext = React.createContext();
+    const [theme, setTheme] = useState('red');
+
     return (
-        <div>
-            <Counter initialCount={0} />
-            <Form />
-        </div>
+
+            <ThemeContext.Provider value={{ backgroundColor: theme }}>
+                <CounterClass initialCount={0} />
+                <CounterFunction initialCount={0} />
+                <Form />
+                <button onClick={() => {
+                    setTheme(prevTheme => {
+                        console.log(prevTheme)
+                        return prevTheme === 'red' ? 'blue' : 'red';
+                    })
+                }}
+                >
+                    Theme Changer
+                </button>
+            </ThemeContext.Provider>
     );
 }
 

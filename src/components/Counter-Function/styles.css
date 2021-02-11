@@ -1,13 +1,18 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
-.Button {
-  margin: 0;
-  padding: .5em 1.5em;
-  outline: none;
-  background-color: hsl(193,9%,79%);
-  border: 1px solid hsl(193,9%,19%);
-  border-radius: .5rem;
+.counterFunction__button {
+    margin: 0 1rem;
+    padding: 0.2em 1.75em;
+    outline: none;
+    background-color: hsl(193, 9%, 89%);
+    border: 1px solid hsl(193, 9%, 19%);
+    border-radius: 0.5rem;
+}
+
+.counterFunction__button:hover {
+    cursor: pointer;
+    background-color: hsl(193, 9%, 79%);
 }
