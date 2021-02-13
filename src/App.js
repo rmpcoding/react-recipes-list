@@ -3,8 +3,9 @@ import CounterClass from './components/Counter-Class/CounterClass';
 import CounterFunction from './components/Counter-Function/CounterFunction';
 import Form from './components/Form/Form';
 
+export const ThemeContext = React.createContext();
+
 function App() {
-    const ThemeContext = React.createContext();
     const [theme, setTheme] = useState('red');
 
     return (

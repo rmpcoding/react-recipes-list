@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './CounterClass.css'
+import { ThemeContext } from '../../App';
+import './CounterClass.css';
 
 export default class Counter extends Component {
     constructor(props) {
@@ -11,23 +12,32 @@ export default class Counter extends Component {
     }
 
     render() {
+        console.log('Render Counter');
         return (
-            <div className="counterClass">
-                <button
-                    className="counterClass__button"
-                    onClick={() => this.changeCount(1)}
-                >
-                    +
-                </button>
-                <span className="counterClass__number">{this.state.count}</span>
-                <button
-                    className="counterClass__button"
-                    onClick={() => this.changeCount(-1)}
-                >
-                    -
-                </button>
-                <div>Counter Class Above</div>
-            </div>
+            <ThemeContext.Consumer>
+                {(style) => (
+                    <div className="counterClass">
+                        <button
+                            style={style}
+                            className="counterClass__button"
+                            onClick={() => this.changeCount(1)}
+                        >
+                            +
+                        </button>
+                        <span className="counterClass__number">
+                            {this.state.count}
+                        </span>
+                        <button
+                            style={style}
+                            className="counterClass__button"
+                            onClick={() => this.changeCount(-1)}
+                        >
+                            -
+                        </button>
+                        <div>Counter Class Above</div>
+                    </div>
+                )}
+            </ThemeContext.Consumer>
         );
     }
 
