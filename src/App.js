@@ -1,30 +1,27 @@
-import React, { useState } from 'react';
-import CounterClass from './components/Counter-Class/CounterClass';
-import CounterFunction from './components/Counter-Function/CounterFunction';
-import Form from './components/Form/Form';
-
-export const ThemeContext = React.createContext();
+import React from 'react';
+import RecipeList from './components/RecipeList/RecipeList'
 
 function App() {
-    const [theme, setTheme] = useState('red');
-
     return (
-
-            <ThemeContext.Provider value={{ backgroundColor: theme }}>
-                <CounterClass initialCount={0} />
-                <CounterFunction initialCount={0} />
-                <Form />
-                <button onClick={() => {
-                    setTheme(prevTheme => {
-                        console.log(prevTheme)
-                        return prevTheme === 'red' ? 'blue' : 'red';
-                    })
-                }}
-                >
-                    Theme Changer
-                </button>
-            </ThemeContext.Provider>
-    );
+        <RecipeList recipes={sampleRecipes} />    
+    )
 }
+
+const sampleRecipes = [
+    {
+        id: 1,
+        name: 'Plain Chicken',
+        servings: 3,
+        cookTime: '1:45',
+        instructions: "1. Put salt on chicken\n2. Put chicken in oven\n3. Eat chicken"
+    },
+    {
+        id: 2,
+        name: 'Plain Pork',
+        servings: 5,
+        cookTime: '0:45',
+        instructions: "1. Put paprika on pork\n2. Put pork in oven\n3. Eat pork"
+    }
+]
 
 export default App;
