@@ -8,27 +8,27 @@ const Form = () => {
             <h2>Create A User</h2>
             <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 name="username"
                 placeholder="username"
-                autofocus
+                autoFocus
             />
             <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 name="password"
                 placeholder="password"
-                autofocus
+                autoFocus
             />
             <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 name="email"
                 placeholder="email"
-                autofocus
+                autoFocus
             />
             <button
-                class="btn btn-lg btn-primary btn-block"
+                className="btn btn-lg btn-primary btn-block"
                 id="submit"
                 type="submit"
                 onClick={(() => {
