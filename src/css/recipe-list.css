@@ -1,3 +1,9 @@
-* {
-    
+.recipe-list {
+    border: 1px solid black;
+    min-height: 100vh;
 }
+
+/* .recipe-list__add-recipe-btn-container {
+
+} */
+
